@@ -3,9 +3,27 @@
     <ion-title>clientes</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>Recent Conversations</ion-list-header>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar slot="start">
+        <img src="../../assets/clientes-img/{{user.image}}" alt="" />
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-avatar>
 
-<ion-content>
-  <ion-button color="mycolor2" (click)="redHome()"
-    >Redireccionar a Home</ion-button
-  >
+      <ion-label>
+        <h2 class="colorVerde">{{user.name}}</h2>
+        <h3>{{user.state}}</h3>
+        <p>{{user.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <div id="container">
+    <ion-button color="mycolor2" (click)="redHome()"
+      >Redireccionar a Home</ion-button
+    >
+  </div>
 </ion-content>
