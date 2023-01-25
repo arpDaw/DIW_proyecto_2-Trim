@@ -3,10 +3,18 @@
     <ion-title>clientes</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-toolbar>
+  <ion-searchbar
+    placeholder="Buscar"
+    animated
+    (ionChange)="searchClientes($event)"
+  ></ion-searchbar>
+</ion-toolbar>
 <ion-content fullscreen>
-  <ion-list>
+  <ion-list *ngIf="permission">
     <ion-list-header>Recent Conversations</ion-list-header>
-    <ion-item *ngFor="let user of users">
+    <ion-item *ngFor="let user of searchUsuario">
       <ion-avatar slot="start">
         <img src="../../assets/clientes-img/{{user.image}}" alt="" />
       </ion-avatar>
@@ -26,4 +34,7 @@
       >Redireccionar a Home</ion-button
     >
   </div>
+  <ion-label *ngIf="!permission"
+    >No tienes permiso para ver los clientes!</ion-label
+  >
 </ion-content>

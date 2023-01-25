@@ -11,6 +11,9 @@ import { map } from 'rxjs/operators';
 export class ClientesPage implements OnInit {
 
   users: any = [];
+  permission: boolean | undefined
+
+  searchUsuario:any
 
   constructor(
     private router:Router,
@@ -20,9 +23,11 @@ export class ClientesPage implements OnInit {
 
   ngOnInit() {
     
+    this.permission = false
     this.getUsers().subscribe(res=>{
       console.log("Res", res)
       this.users = res;
+      this.searchUsuario = this.users
     });
   }
 
@@ -38,5 +43,16 @@ export class ClientesPage implements OnInit {
         return res.data;
       })
       )
+  }
+
+  searchClientes(event:any){
+    const text = event.target.value
+    this.searchUsuario = this.users
+    if(text && text.trim() != ''){
+      this.searchUsuario = this.searchUsuario.filter((user:any)=>{
+        this.permission = true
+        return (user.name.toLowerCase().indexOf(text.toLowerCase()) > -1)
+      })
+    }
   }
 }

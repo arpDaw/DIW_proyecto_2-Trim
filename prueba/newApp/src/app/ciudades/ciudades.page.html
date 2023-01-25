@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-title>ciudades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar>
+  <ion-searchbar
+    placeholder="Buscar"
+    animated
+    (ionChange)="searchCiudades($event)"
+  ></ion-searchbar>
+</ion-toolbar>
+
+<ion-content>
+  <ion-row>
+    <ion-col
+      sizeLg="6"
+      sizeMd="6"
+      sizeXs="12"
+      *ngFor="let ciudad of searchCiudad"
+    >
+      <ion-card [routerLink]="['/ciudad', ciudad.id]">
+        <img src="../../assets/ciudades-img/{{ciudad.image}}" alt="" />
+        <div class="card-titulo">{{ciudad.name}}</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
