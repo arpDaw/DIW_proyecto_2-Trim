@@ -1,15 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Journal </ion-title>
+    <ion-title> Home </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Journal</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Journal"></app-explore-container>
+  <div class="greeting">
+    <h1>Hello, sunshine!</h1>
+    <h2>How was your day?</h2>
+  </div>
+  <div class="choice">
+    <button>
+      <img
+        class="moodsticker"
+        src="../../assets/mood_stickers/smile.png"
+        alt=""
+      />
+    </button>
+    <button>
+      <img
+        class="moodsticker"
+        src="../../assets/mood_stickers/nope.png"
+        alt=""
+      />
+    </button>
+    <button>
+      <img
+        class="moodsticker"
+        src="../../assets/mood_stickers/what.png"
+        alt=""
+      />
+    </button>
+  </div>
 </ion-content>
