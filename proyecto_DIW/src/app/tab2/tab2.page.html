@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Journal </ion-title>
+    <ion-title> 22th of April 2023 </ion-title>
+    <!-- TODO: display the date of current day -->
   </ion-toolbar>
 </ion-header>
 
@@ -10,6 +11,36 @@
       <ion-title size="large">Journal</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="wrapper">
+    <ion-item lines="inset">
+      <ion-label position="stacked">How are you feeling?</ion-label>
+      <br />
+      <ion-input placeholder="Today I'm feeling..."></ion-input>
+      <!-- TODO: placeholder should show 'happy', 'meh', or 'sad' depending on the icon pressed by the user on the home tab -->
+    </ion-item>
 
-  <app-explore-container name="Journal page"></app-explore-container>
+    <ion-item lines="inset">
+      <ion-label position="stacked">What contributed to it?</ion-label>
+      <ul>
+        <li><ion-input placeholder="Had pizza"></ion-input></li>
+        <li><ion-input placeholder="Had pizza"></ion-input></li>
+        <li><ion-input placeholder="Had pizza"></ion-input></li>
+      </ul>
+      <!-- TODO: it should add a new li element when the input in the first li has been filled -->
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="stacked">What did you do today?</ion-label>
+      <ul>
+        <li><ion-input placeholder="Today I did..."></ion-input></li>
+        <li><ion-input placeholder="Today I did..."></ion-input></li>
+        <li><ion-input placeholder="Today I did..."></ion-input></li>
+      </ul>
+      <!-- TODO: it should add a new li element when the input in the first li has been filled -->
+    </ion-item>
+    <div class="bSaveBlock">
+      <ion-item lines="none">
+        <ion-button>Save journal</ion-button>
+      </ion-item>
+    </div>
+  </div>
 </ion-content>
