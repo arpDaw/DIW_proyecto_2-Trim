@@ -1,0 +1,30 @@
+.wrapper{
+    margin-right: 15px;
+}
+.profile_pic_camera{
+width: 40px;
+height: 40px;
+position: absolute;
+margin-left: 10px;
+margin-top: 10px;
+z-index: 7;
+}
+button{
+    position: absolute;
+}
+.pic_slot{
+    margin-top: 8px;
+    width: 60px;
+    height: 60px;
+    background-color: #585858;
+    border-radius: 50%;
+    
+}
+.profile_pic{
+    width: 60px;
+    height: auto;
+    margin-left: 3px;
+    margin-bottom: 4px;
+    z-index: 6;
+    filter: brightness(75%)
+}

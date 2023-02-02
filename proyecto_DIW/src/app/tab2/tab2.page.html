@@ -22,9 +22,9 @@
     <ion-item lines="inset">
       <ion-label position="stacked">What contributed to it?</ion-label>
       <ul>
-        <li><ion-input placeholder="Had pizza"></ion-input></li>
-        <li><ion-input placeholder="Had pizza"></ion-input></li>
-        <li><ion-input placeholder="Had pizza"></ion-input></li>
+        <li *ngFor="let contribution of contributions">
+          <ion-input placeholder="Had pizza"></ion-input>
+        </li>
       </ul>
       <!-- TODO: it should add a new li element when the input in the first li has been filled -->
     </ion-item>

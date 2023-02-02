@@ -1,15 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Profile </ion-title>
+    <ion-title> Edit profile </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Profile</ion-title>
+      <ion-title size="large">Edit profile</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="wrapper">
+    <ion-item lines="none">
+      <div class="pic_slot">
+        <button>
+          <ion-icon class="profile_pic_camera" name="camera"></ion-icon>
+        </button>
 
-  <app-explore-container name="Profile"></app-explore-container>
+        <img
+          class="profile_pic"
+          src="../../assets/default_img/148724.png"
+          alt=""
+        />
+      </div>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-label position="stacked">Name: </ion-label>
+      <br />
+      <ion-input placeholder="John Doe"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="stacked">Birthdate: </ion-label>
+      <br />
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item lines="inset">
+      <ion-label position="stacked">Email: </ion-label>
+      <br />
+      <ion-input placeholder="JohnDoe@example.com"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item lines="inset">
+        <ion-select placeholder="Select your theme: ">
+          <ion-select-option value="cats">Cats</ion-select-option>
+          <ion-select-option value="dogs">Dogs</ion-select-option>
+          <ion-select-option value="birds">Birds</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item lines="none">
+      <ion-button>Save changes</ion-button>
+    </ion-item>
+  </div>
 </ion-content>
