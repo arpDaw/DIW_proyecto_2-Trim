@@ -1,7 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> 22th of April 2023 </ion-title>
-    <!-- TODO: display the date of current day -->
+    <ion-title>{{todayDate | date: 'longDate'}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,19 +20,38 @@
 
     <ion-item lines="inset">
       <ion-label position="stacked">What contributed to it?</ion-label>
+
+      <form (ngSubmit)="addContribution()">
+        <ion-input
+          name="content"
+          id="content"
+          class="content"
+          [(ngModel)]="new.content"
+          placeholder="Today I..."
+        ></ion-input>
+      </form>
+
       <ul>
-        <li *ngFor="let contribution of contributions">
-          <ion-input placeholder="Had pizza"></ion-input>
-        </li>
+        <li *ngFor="let contribution of contributions">{{contribution}}</li>
       </ul>
+
       <!-- TODO: it should add a new li element when the input in the first li has been filled -->
     </ion-item>
+
     <ion-item lines="inset">
       <ion-label position="stacked">What did you do today?</ion-label>
+
+      <form (ngSubmit)="addStuffDone()">
+        <ion-input
+          name="stuff"
+          id="stuff"
+          class="stuff"
+          [(ngModel)]="new2.stuff"
+          placeholder="Today I did..."
+        ></ion-input>
+      </form>
       <ul>
-        <li><ion-input placeholder="Today I did..."></ion-input></li>
-        <li><ion-input placeholder="Today I did..."></ion-input></li>
-        <li><ion-input placeholder="Today I did..."></ion-input></li>
+        <li *ngFor="let stuff of stuffdone">{{stuff}}</li>
       </ul>
       <!-- TODO: it should add a new li element when the input in the first li has been filled -->
     </ion-item>
