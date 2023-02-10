@@ -1,0 +1,29 @@
+.titulo{
+    text-align: center;
+   
+}
+
+.loginForm{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ion-input{
+    margin-top: 8px;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+ion-label{
+    margin-top: 8px;
+}
+a{
+    
+    text-decoration: none;
+}
+
+ion-button{
+    margin-top: 10px;
+}

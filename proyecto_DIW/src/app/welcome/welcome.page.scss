@@ -1,0 +1,36 @@
+.prefacio{
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 30px;
+}
+span{
+    width: 100%;
+    font-size: x-large;
+    margin-top: 10px;
+}
+.buttons{
+    text-align: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ion-button{
+    min-width: 109.017px;
+    height: 36px;
+}
+.highlight{
+    color: #43344b;
+    font-weight: bold;
+}
+.contenedor{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
