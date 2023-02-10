@@ -15,6 +15,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page],
+  exports: [
+    Tab1PageRoutingModule
+  ]
 })
 export class Tab1PageModule {}
