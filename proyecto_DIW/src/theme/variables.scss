@@ -235,5 +235,45 @@
     --ion-tab-bar-background: #654C72;
 
     --ion-card-background: #1e1e1e;
+    
   }
+
+  ion-alert{
+    --background: #2d2133 !important;
+}
+ion-alert.custom-alert {
+  --backdrop-opacity: 0.7;
+}
+.custom-alert .alert-button-group {
+  padding: 8px;
+}
+button.alert-button.alert-button-confirm {
+  background-color: #da82bf;
+  color: #FFF;
+  font-weight: bolder;
+}
+button.alert-button.alert-button-cancel{
+  background-color: #7c4b6d;
+  border-radius: 4px;
+  color: #FFF;
+}
+.md button.alert-button.alert-button-confirm {
+  border-radius: 4px;
+}
+
+.ios .custom-alert button.alert-button {
+  border: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2)
+}
+
+.ios button.alert-button.alert-button-cancel {
+  border-right: 0;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  
+}
+
+.ios button.alert-button.alert-button-confirm {
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+}
 }
