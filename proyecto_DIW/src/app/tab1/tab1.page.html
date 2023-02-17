@@ -37,7 +37,7 @@
       />
     </button>
   </div>
-  <div class="quoteBox">
-    <span>a</span>
+  <div class="quoteBox" *ngFor="let quote of quotes">
+    <span>{{quote}}</span>
   </div>
 </ion-content>

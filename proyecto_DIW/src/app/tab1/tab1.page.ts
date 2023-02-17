@@ -58,13 +58,18 @@ export class Tab1Page {
     console.log(result)
   }
   
-  obtainQuote(){
-    fetch("https://type.fit/api/quotes")
+  ngOnInit(){
+    var quote = ""
+    var quotes = []
+
+
+        fetch("https://type.fit/api/quotes")
     .then(function(response) {
       return response.json();
     })
     .then(function(data) {
-      console.log(data);
+      quotes = data
+      console.log(quote);
     });
   }
 
