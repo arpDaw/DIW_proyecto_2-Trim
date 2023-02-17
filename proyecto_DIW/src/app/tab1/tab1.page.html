@@ -14,27 +14,30 @@
     <h1>Hello, sunshine!</h1>
     <h2>How was your day?</h2>
   </div>
-  <div class="choice">
-    <button (click)="presentAlert()">
+  <div class="choice" (click)="presentAlert($event)">
+    <button id="bGreat">
       <img
         class="moodsticker"
         src="../../assets/mood_stickers/smile.png"
-        alt=""
+        alt="great"
       />
     </button>
-    <button>
+    <button id="bMeh">
       <img
         class="moodsticker"
         src="../../assets/mood_stickers/nope.png"
-        alt=""
+        alt="meh"
       />
     </button>
-    <button>
+    <button id="bBad">
       <img
         class="moodsticker"
         src="../../assets/mood_stickers/what.png"
-        alt=""
+        alt="bad"
       />
     </button>
+  </div>
+  <div class="quoteBox">
+    <span>a</span>
   </div>
 </ion-content>
